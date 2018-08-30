@@ -7,7 +7,7 @@ using namespace std;
 #include<string.h>
 void  id()
 {
- char name[15],parentage[10],money1[20],phone[13];long int money; int i=-1,dob;
+ char name[15],parentage[10],money1[20],phone[13];long int money; int i,dob;
  ofstream fout;
  cout<<"Enter ur phone no  please write 10 digits";
 cin>>phone;
@@ -31,7 +31,7 @@ cin>>dob;
 fout<<"\nDOB=  "<<dob;
 cout<<"if u want to add money to account then press 1";
 cin>>i;
-while(1)
+while(i==1)
 {
     cout<<"Plese enter ur ammount in numbers";
     cin>>money;
