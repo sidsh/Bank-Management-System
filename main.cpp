@@ -1,7 +1,8 @@
 //.......bank management main................
 
 
-#include<stdio.h>
+#include<stdio.h> 
+#include"newaccount.h"
 #include<iostream>
 using namespace std;
 
