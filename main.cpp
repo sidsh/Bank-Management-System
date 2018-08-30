@@ -1,11 +1,13 @@
 //.......bank management main................
 
 
-#include<stdio.h> 
-#include"newaccount.h"
+#include<stdio.h>
 #include<iostream>
+#include "createid.h"
 using namespace std;
 
+//**********prototypes***********
+void id();
 
 int main()
 {
@@ -20,7 +22,7 @@ cin>>choice;
 switch(choice)
 {
  case 1:
-      // createid();
+       id();
         break;
 case 2:
        //searchid();
@@ -32,4 +34,3 @@ case 4: exit (0);
 default:  cout<<"Enter your valid choice";
 }
 }
-
