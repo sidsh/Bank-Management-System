@@ -4,10 +4,15 @@
 #include<stdio.h>
 #include<iostream>
 #include "newaccount.h"
+#include "addmoney.h"
 using namespace std;
 
+//***********Globalvaribles*********//
+long int ak;
+
 //**********prototypes***********
-void id();
+long int id();
+void addmoneyy(long int);
 
 int main()
 {
@@ -22,11 +27,13 @@ cin>>choice;
 switch(choice)
 {
  case 1:
-       id();
+    ak =id();
+       
         break;
 case 2:
-       //searchid();
-      break;
+       addmoneyy(ak);
+      
+	  break;
 case 3: 
        //modifydetails();
 case 4: exit (0);
