@@ -5,9 +5,10 @@ using namespace std;
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-void  id()
+long int updatebalance;
+long int  id()
 {
- char name[15],parentage[10],money1[20],phone[13];long int money; int i,dob;
+ char name[15],parentage[10],phone[13],dob;long int money; int i=1;
  ofstream fout;
  cout<<"Enter ur phone no  please write 10 digits";
 cin>>phone;
@@ -29,19 +30,22 @@ fout<<"\nPARENTAGE=  "<<parentage;
 cout<<"Enter dob\n";
 cin>>dob;
 fout<<"\nDOB=  "<<dob;
-cout<<"if u want to add money to account then press 1";
-cin>>i;
-while(i==1)
+cout<<"if u want to add money to account then any key and if u want to exit then press  1";
+scanf("%d",&i);
+if(i!=1)
 {
+
     cout<<"Plese enter ur ammount in numbers";
-    cin>>money;
+    scanf("%ld",&money);
+    
+    
     fout<<"\nTOTAL BALANCE= "<<money;
     cout<<"Your Balance has been updated";
-    exit(0);
+    
 }
 
 
+cout<<"moneyyy=="<<money;
+return(money);
 fout.close();
-
-
 }
