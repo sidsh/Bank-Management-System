@@ -5,6 +5,7 @@
 #include<iostream>
 #include "newaccount.h"
 #include "addmoney.h"
+#include "display.h"
 using namespace std;
 
 //***********Globalvaribles*********//
@@ -13,6 +14,7 @@ long int ak;
 //**********prototypes***********
 long int id();
 void addmoneyy(long int);
+int display();
 
 int main()
 {
@@ -26,6 +28,7 @@ cout<<"Press your choice\n";
 cin>>choice;
 switch(choice)
 {
+	
  case 1:
     ak =id();
        
@@ -35,7 +38,7 @@ case 2:
       
 	  break;
 case 3: 
-       //modifydetails();
+       display();
 case 4: exit (0);
         break;
 default:  cout<<"Enter your valid choice";
