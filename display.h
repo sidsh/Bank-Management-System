@@ -5,7 +5,7 @@
 #include<string.h>
 #include<dos.h>
 using namespace std;
-int display()
+void display()
 {
 	ifstream fin;
 	char phone[12];
@@ -18,13 +18,19 @@ int display()
 	      exit(0);
 }
 	fin.open(phone);
-	int ch;
-	ch=fin.get();
+	/*if(phone!=0)
+	{
+	   cout<<"No such file found"<<endl;
+	   exit (0);	
+	}*/
+	
+char ch;
+   ch=fin.get();
 	while(!fin.eof())
 	{
 		cout<<ch;
-		ch=fin.get();
+	ch=fin.get();
 	}
 	fin.close();
-	return 0;
+//	return 0;
 }
