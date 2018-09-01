@@ -1,36 +1,46 @@
-#include<iostream>
-#include<fstream>
-#include<stdlib.h>
+//.......bank management main................
+
+
 #include<stdio.h>
-#include<string.h>
-#include<dos.h>
+#include<iostream>
+#include "newaccount.h"
+#include "addmoney.h"
+#include "display.h"
 using namespace std;
-void display()
+
+//***********Globalvaribles*********//
+long int ak;
+
+//**********prototypes***********
+long int id();
+void addmoneyy(long int);
+void display();
+
+int main()
 {
-	ifstream fin;
-	char phone[12];
-	cout<<"Enter your id"<<endl;
-	cin>>phone;
-	int a=strlen(phone);
-	if(a!=10)
-	{
-	cout<<"You have entered a wrong id "<<endl;
-	      exit(0);
-}
-	fin.open(phone);
-	/*if(phone!=0)
-	{
-	   cout<<"No such file found"<<endl;
-	   exit (0);	
-	}*/
+int choice;
+cout<<"To Select any option press numbers that are before to options";
+cout<<"\n 1. create new account";
+cout<<"\n 2. get details of ur account";
+cout<<"\n 3.  update details of ur account";
+cout<<"\n 4. press to exit";
+cout<<"Press your choice\n";
+cin>>choice;
+switch(choice)
+{
 	
-char ch;
-   ch=fin.get();
-	while(!fin.eof())
-	{
-		cout<<ch;
-	ch=fin.get();
-	}
-	fin.close();
-//	return 0;
+ case 1:
+    ak =id();
+       
+        break;
+case 2:
+       addmoneyy(ak);
+      
+	  break;
+case 3: 
+       display();
+case 4: exit (0);
+        break;
+default:  cout<<"Enter your valid choice";
+}
 }
